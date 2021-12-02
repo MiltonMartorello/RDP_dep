@@ -1,0 +1,59 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+</head>
+<body>
+{{#partial "contenido"}}
+    <div method="POST" action="/">
+
+        <h1 style="text-align: center">Rescate de Patitas!</h1>
+        <h2 style="text-align: center; color: dimgrey">Mas seguridad para vos, mas seguridad para tu mascota.</h2>
+
+        <div class="col">
+
+            <div class="row-4">
+                <div  class="p-2 mb-2 text-black" style="background: rgb(100, 149, 237, 0.5);
+                padding: 10px;
+                margin: 50px;
+                border-radius: 10px;
+                height: 600px;
+                ">
+                    <div>
+                        <h4>Acerca de nosotros</h4>
+                        <p style="font-size: larger" align="justify">Debido a la creciente conciencia social que se está tomando sobre
+                            el cuidado de las mascotas y de animales en general, muchas Asociaciones se encargan de
+                            cuidarlos y de hacer respetar sus derechos. La atención y el cuidado abarca desde la ayuda
+                            para encontrar mascotas perdidas, la facilitación y difusión de mascotas que están en
+                            adopción, hasta la búsqueda y el encuentro de hogares de tránsito para mascotas que no
+                            pueden quedarse en los hogares de los rescatistas.</p>
+                        <p style="font-size: larger" align="justify">Todas estas Asociaciones están formadas por voluntarios, quienes
+                            realizan el trabajo por amor a los animales. Los medios de difusión, utilizados para
+                            comunicar las actividades que realizan, suelen ser, en su mayor medida, las redes sociales
+                            oficiales que gestionan. Si bien estos medios son masivos y están muy cercanos al público
+                            general, la labor de la gestión de las Asociaciones se ve dificultada por no poseer una
+                            clara trazabilidad sobre algunas cuestiones importantes, como ser las mascotas que tienen en
+                            adopción, las mascotas que se pudieron rescatar de la calle, las mascotas que fueron
+                            encontradas y devueltas a sus dueños, entre otras. </p>
+                    </div>
+                    <div style="text-align: center">
+                        <img style="align-self: center"
+                             src="https://p.kindpng.com/picc/s/214-2140438_cat-dog-grooming-pet-sitting-cat-and-dog.png"
+                             height="200px">
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        </form>
+
+
+    </div>
+{{/partial}}
+
+{{>layout.html.hbs}}

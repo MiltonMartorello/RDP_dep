@@ -1,0 +1,73 @@
+{{#partial "contenido"}}
+    <h1>Registrate como dueño</h1>
+    <p>Una vez que formes parte del sistema de dueños podras cargar todas las mascotas que necesites</p>
+    <div class="row">
+        <div class="col-9">
+            <form method="POST" action="/account/create">
+                <div class="p-2 mb-2 text-black" style="background: rgb(100, 149, 237, 0.5);
+                padding: 10px;
+                text-align:justify;
+                border-radius: 10px;
+                ">
+                    <h2>Nuevo Dueño</h2>
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Usuario</div>
+                        <input class="col-4 m-2" type="text" name="user"/>
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Contraseña</div>
+                        <input class="col-4 m-2" type="password" name="password"/>
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Confirmar Contraseña</div>
+                        <input class="col-4 m-2" type="password" name="contraseña"/>
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-4 m-2"> Nombre <input type="text" name="nombre"/></div>
+                        <div class="col-4 m-2"> Apellido <input type="text" name="apellido"/></div>
+                        <div class="col-4 m-2"> Fecha de nacimiento <input type="date" name="nacimiento"/></div>
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Tipo <select name="tipo">
+                            <option value="DNI">Dni</option>
+                            <option value="PASAPORTE" selected>Pasaporte</option>
+                        </select></div>
+                        <div class="col-4 m-2"> Numero <input type="text" name="documento"/></div>
+                    </div>
+                    <div class="m-2">
+                        <label for="notification">Medios de notificacion<br></label><br>
+                        <a><input class="check" type="checkbox" name="SMS"> SMS</a>
+                        <a><input class="check" type="checkbox" name="EMAIL"> Mail</a>
+                    </div>
+                    <hr>
+
+                    <h3>Contacto</h3>
+
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Nombre</div>
+                        <input class="col-4 m-2" type="text" name="nombre_contacto"/>
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Apellido</div>
+                        <input class="col-4 m-2" type="text" name="apellido_contacto"/>
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Telefono</div>
+                        <input class="col-4 m-2" type="text" name="telefono"/>
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Email</div>
+                        <input class="col-4 m-2" type="email" name="email"/>
+                    </div>
+                    <div class="p-2 mb-2 text-black" style="text-align: right">
+                        <a href="/">
+                            <button type="button" class="col-2 btn btn-danger">Cancelar</button>
+                        </a>
+                        <input type='submit' class="col-2 btn btn-success" name='registrar' value='Registrar'>
+                    </div>
+                </div>
+            </form>
+        </div>
+{{/partial}}
+
+{{>layout.html.hbs}}

@@ -1,0 +1,55 @@
+{{#partial "contenido"}}
+
+    <form method="POST" action="/account/login">
+
+        <h1 style="text-align: center">Rescate de Patitas!</h1>
+        <h2 style="text-align: center; color: dimgrey">Mas seguridad para vos, mas seguridad para tu mascota.</h2>
+
+        <div class="row">
+            <div class="col">
+                <img style="margin-top: 50px"  src="https://p.kindpng.com/picc/s/214-2140597_cat-and-dog-cat-and-dog-sitting-together.png" width="400px">
+            </div>
+
+            <div class="col-7">
+                <div class="p-2 mb-2 text-black" style="background: rgb(100, 149, 237, 0.5);
+                padding: 10px;
+                text-align:center;
+                margin: 50px;
+                border-radius: 10px;
+                height: 500px;
+                ">
+                    <h4>Unite a nosotros</h4>
+                    <h5>Si queres brindarle una mayor seguridad a tu mascota, te invitamos a que la registres y seas
+                        parte de esta comunidad!</h5>
+                    <div class="row justify-content-start" style="margin: 40px;">
+                        <div class="col-3 m-2" style="font-size: large"> Usuario</div>
+                        <input class="col-6 m-2" type="text" name="usuario" placeholder="Nombre de usuario"/>
+                    </div>
+<!--
+                    <div class="row justify-content-start" style="margin: 40px;">
+                        <div class="col-3 m-2" style="font-size: large"> Email</div>
+                        <input class="col-6 m-2" type="email" name="email" placeholder="email@email.com"/>
+                    </div>
+
+-->
+                    <div class="row justify-content-start" style="margin: 40px;">
+                        <div class="col-3 m-2" style="font-size: large"> Contraseña</div>
+                        <input class="col-6 m-2" type="password" name="password"/>
+                    </div>
+
+                    <div style="margin: 40px;">
+                        <a href="/" style="display: inline-block">
+                            <input type='submit' class="btn btn-warning" style="padding: 5px 60px; font-size: 20px" name='login' value='Login'>
+                        </a>
+                        <a href="/account/create" style="display: inline-block">
+                            <input type='button' class="btn btn-success" style="padding: 5px 60px; color: black; font-size: 20px" name='registrar' value='Registrar' >
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+{{/partial}}
+
+{{>layout.html.hbs}}

@@ -1,0 +1,38 @@
+{{#partial "contenido"}}
+    <head>
+     <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <h1>Configuración</h1>
+    <form method="POST" action="/admin/config" >
+        <div class="p-2 mb-2 text-black" style="
+                padding: 10px;
+                text-align:justify;
+                border-radius: 10px;
+                ">
+            <table class="wp-table" id="tbl">
+                <tr>
+                  <th>Nombre</th>
+                    <th>Acciones</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="nombre"/></td>
+                    <td>
+                        <div class="col-md-auto">
+                            <input type='submit' class="btn btn-primary" name='guardar' value='Guardar'>
+                        </div>
+                    </td>
+                </tr>
+              </table>
+        </div>
+    </form>
+    <div>
+     <ul>
+         {{#caracteristicas}}
+             <li> {{titulo}} </li>
+         {{/caracteristicas}}
+        </ul>
+    </div>
+
+{{/partial}}
+
+{{>layout.html.hbs}}

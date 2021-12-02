@@ -1,0 +1,52 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: royalblue;">
+    <a class="navbar-brand" href="/" style="color: whitesmoke; font-size: xx-large; margin-left: 20px">Rescate de
+        patitas</a>
+    <img src="https://images-ext-1.discordapp.net/external/uwYygOJCNhpo8AL4jPQGv1Vr_0SH448vYD8uy_cqwNI/https/i.imgur.com/LyZ4jdS.png"
+         width="120px">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/pet/new" style="color: whitesmoke; font-size: x-large; margin-left: 50px">Registrar
+                    mascota</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/pet/found" style="color: whitesmoke; font-size: x-large; margin-left: 50px">Encontre
+                    una mascota</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/pets"
+                   style="color: whitesmoke; font-size: x-large; margin-left: 50px;">Mascotas Cargadas</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/account/login"
+                   style="color: whitesmoke; font-size: x-large; margin-left: 50px;">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    {{#block "contenido"}}
+    {{/block}}
+</div>
+
+<footer class="footer">
+    <img style="margin-left: 30%" ;
+         src="https://media.discordapp.net/attachments/834593490843336739/908570634219577354/footer.png"/>
+</footer>
+</body>
+</html>

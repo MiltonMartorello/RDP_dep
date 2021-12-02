@@ -1,0 +1,82 @@
+{{#partial "contenido"}}
+    <h1>Registra a tu mascota</h1>
+    <p>Recorda que podes cargar todas las mascotas que necesites.</p>
+    <div class="row">
+        <div class="col-9">
+            <form method="POST" action="/pet/create" enctype="multipart/form-data">
+                <div class="p-2 mb-2 text-black" style="background: rgb(100, 149, 237, 0.5);
+                padding: 10px;
+                text-align:justify;
+                border-radius: 10px;
+                ">
+                    <h2>Nueva Mascota</h2>
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Nombre</div>
+                        <input class="col-4 m-2" type="text" name="nombre"/>
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Apodo</div>
+                        <input class="col-4 m-2" type="text" name="apodo"/>
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Edad</div>
+                        <input class="col-4 m-2" type="number" name="edad"/>
+                    </div>
+
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Sexo <select name="sexo">
+                            <option value="FEMENINO">HEMBRA</option>
+                            <option value="MASCULINO" selected>MACHO</option>
+                        </select></div>
+                    </div>
+
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Especie <select name="especie">
+                            <option value="GATO">GATO</option>
+                            <option value="PERRO">PERRO</option>
+                        </select></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descripcion">Descripcion fisica</label>
+                        <textarea class="form-control" id="descripcion" rows="3"></textarea>
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-2">
+                            <label class="custom-file-upload">
+                                Imagen de la mascota <br>
+                                <input type="file" class="btn btn-primary m-3" id="fileInput" accept="image/*"
+                                       name="image">
+                            </label>
+                        </div>
+                        {{!--  <div class="col-2">
+                             <button type="fileInput" class="btn btn-primary m-3">Subir fotos</button>
+                         </div>
+                         <div class="col-2"><i class="material-icons"
+                                               style="font-size:60px;color:whitesmoke; margin-right: 100px">photo</i></div>
+                     </div> --}}
+                        <div class="row justify-content-start">
+                            <div class="col-3 m-2"> Caracteristicas <select name="caracteristicas">
+                                {{#caracteristicas}}
+                                    <option value="{{titulo}}">{{titulo}}</option>
+                                {{/caracteristicas}}
+                            </select></div>
+                            <div class="col-3 m-2"><input type="text" name="caracteristica_respuesta"/></div>
+                            <div class="col-3 m-2">
+                                <button type="button" class="btn btn-primary">Agregar otra</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 mb-2 text-black" style="text-align: right">
+                        <a href="/">
+                            <button type="button" class="col-2 btn btn-danger">Cancelar</button>
+                        </a>
+                        <input type='submit' class="col-2 btn btn-success" name='registrar' value='Registrar'>
+                    </div>
+            </form>
+        </div>
+    </div>
+
+{{/partial}}
+
+{{>layout.html.hbs}}

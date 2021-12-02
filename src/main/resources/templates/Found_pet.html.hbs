@@ -1,0 +1,81 @@
+{{#partial "contenido"}}
+<div>
+    <div class="row">
+        <div class="col">
+            <h1>Rescate una mascota!</h1>
+            <p>Si encontraste una mascota, aca vas a poder registrarla para que pronto encontremos al dueño o en su
+                defecto una nueva familia!</p>
+        </div>
+        <div class="col">
+            <img src="https://media.discordapp.net/attachments/834593490843336739/908572385651855390/perrisygatis.png"
+                 width="200px">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-9" >
+            <form method="POST" action="/pet/found">
+                <div style="background: rgba(100, 149, 237, 0.5);
+                padding: 10px;
+                text-align:justify;
+                border-radius: 10px;
+                ">
+                    <h2>Formulario mascota encontrada</h2>
+                    <h3>Completa los datos de la persona que rescato la mascota</h3>
+                    <br>
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Nombre</div>
+                        <input class="col-6 m-2" type="text" name="nombre"/>
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Apellido</div>
+                        <input class="col-6 m-2" type="text" name="apellido"/>
+                    </div>
+
+                    <div class="row justify-content-start">
+                        <div class="col-4 m-2"> Direccion <input type="text" name="direccion"/></div>
+                        <div class="col-4 m-2" style="text-align: left"> Fecha de nacimiento <input type="date" name="nacimiento"/></div>
+                    </div>
+
+                    <div class="row justify-content-start">
+                        <div class="col-4 m-2"> Tipo <select name="tipo">
+                            <option value="DNI">DNI</option>
+                            <option value="PASAPORTE" selected>Pasaporte</option>
+                        </select></div>
+                        <div class="col-4 m-2" style="text-align: left"> Numero de documento <input type="text" name="documento"/></div>
+                    </div>
+                    <br>
+                    <hr>
+                    <h3>Informacion de contacto</h3>
+
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Nombre</div>
+                        <input class="col-4 m-2" type="text" name="nombre"/>
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Apellido</div>
+                        <input class="col-4 m-2" type="text" name="apellido"/>
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Email</div>
+                        <input class="col-4 m-2" type="email" name="email"/>
+                    </div>
+                    <div class="row justify-content-start">
+                        <div class="col-2 m-2"> Telefono</div>
+                        <input class="col-4 m-2" type="text" name="telefono"/>
+                    </div>
+
+                    <div class="p-2 mb-2 text-black" style="text-align: right">
+                        <a href="/">
+                            <button type="button" class="col-2 btn btn-danger">Cancelar</button>
+                        </a>
+                        <input type='submit' class="col-2 btn btn-success" name='registrar' value='Registrar'>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+{{/partial}}
+
+{{>layout.html.hbs}}

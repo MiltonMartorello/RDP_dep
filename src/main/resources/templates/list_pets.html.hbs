@@ -1,0 +1,30 @@
+{{#partial "contenido"}}
+    <head>
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <div style="width: 90%; height: 80%">
+        <h1>Mascotas Cargadas</h1>
+        <form method="POST" action="/admin/config">
+            <div class="p-2 mb-2 text-black" style="
+                padding: 10px;
+                text-align:justify;
+                border-radius: 10px;
+                ">
+            </div>
+        </form>
+        <div>
+            <ul>
+                {{#mascotas}}
+                    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-header"> Mascota </div>
+                        <div class="card-body">
+                            <h5> {{nombre}} </h5>
+                        </div>
+                    </div>
+                {{/mascotas}}
+            </ul>
+        </div>
+    </div>
+{{/partial}}
+
+{{>layout.html.hbs}}
